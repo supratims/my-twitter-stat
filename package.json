@@ -1,0 +1,23 @@
+{
+	"name": "twitter-test",
+	"version": "0.1.0",
+	"description": "Twitter stats",
+	"author": {
+		"name": "Supratim Chowdhury",
+		"email": "supratims@gmail.com"
+	},
+	"website":{
+		"url": "supratims.com"
+	},
+	"private": true,
+	"dependencies": {
+		"express": "3.0.6",
+		"jade": "0.27.7",
+        "qs": "*",
+        "oauth": "*"		
+	},
+	"engines": {
+		"node": "0.8.14",
+		"npm":  "1.1.65"
+	}
+}

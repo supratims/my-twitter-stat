@@ -1,5 +1,5 @@
 /*
- Twitter client app, thanks to
+ Twitter client app, thanks to github.com/olinjs
  */
 
 var OAuth = require('oauth').OAuth;

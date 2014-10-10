@@ -1,4 +1,6 @@
-### A basic app to test twitter apis using nodejs : credits: github.com/olinjs
+### Description
+A basic app to test twitter apis using nodejs : credits: github.com/olinjs
+Displays a list of your top 100 followers sorted by their own followers count
 
 ### Dependencies
 * Look at package.json
@@ -6,7 +8,7 @@
 
 
 ###How to use
-* regsiter your app on twitter and get those keys, enter them in twitter.js
+Regsiter your app on twitter and get those keys, enter them in app.js
 
 	var config = {
 	    "consumerKey": "blah",

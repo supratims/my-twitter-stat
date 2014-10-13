@@ -83,6 +83,12 @@ exports.getMentionsTimeline = function (params, error, success) {
     var url = this.baseUrl + path;
     this.doRequest(url, error, success);
 };
+//---- SEARCH ---
+exports.doSearch = function (params, error, success) {
+    var path = '/search/tweets.json' + this.buildQS(params);
+    var url = this.baseUrl + path;
+    this.doRequest(url, error, success);
+};
 
 exports.getHomeTimeline = function (params, error, success) {
     var path = '/statuses/home_timeline.json' + this.buildQS(params);

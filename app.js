@@ -30,8 +30,18 @@ app.get('/', function(req, res) {
 app.get('/index', function(req, res) {
 	res.render('index');
 });
+app.get('/search', function(req, res) {
+	res.render('search');
+});
 app.get('/api/followers/get', function(req, res) {
 	Twitter.getFollowers({ screen_name: 'supratim', count: '100'}, function(err) {
+		res.send(err, 400);
+	}, function(data) {
+		res.send(data);
+	});
+});
+app.get('/api/search', function(req, res) {
+	Twitter.doSearch({q: req.param('searchParams'), lang:req.param('lang') || 'en'}, function(err) {
 		res.send(err, 400);
 	}, function(data) {
 		res.send(data);
@@ -54,12 +64,12 @@ function initTwitter() {
     var success = function (data) {
     	console.log('Data [%s]', data);
     };
-	//get your own keys
+	//Go GET your own keys - https://apps.twitter.com
 	var config = {
-	    "consumerKey": "blah",
-	    "consumerSecret": "blah",
-	    "accessToken": "blah",
-	    "accessTokenSecret": "blah"
+	    "consumerKey": "m1NcsMqOCRV6hmLj2aYtF3Wyh",
+	    "consumerSecret": "QImgRwYlHGAZDGyWJRba5Myej3dEVXjJQU3qdPur5BM9GcyOpp",
+	    "accessToken": "14905739-CKv73eLcnmAxHEI5qD7E5yNlagIUWzHo8CcgGMlfa",
+	    "accessTokenSecret": "tsJ3EAX0v8fKCPgRxF0oE5uH86Xt1Onmjc2DKoe0cYbza"
 	};
 
     Twitter.init(config);

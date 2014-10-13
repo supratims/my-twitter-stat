@@ -1,14 +1,17 @@
 div.container
-	div.navbar(role="navigation")
-		div.container
+	nav.navbar.navbar-default(role="navigation")
+		div.container-fluid
 			div.navbar-header
 				a.navbar-brand(href="#") Tweet-o-sphere
-			ul.nav.navbar-nav
-				li.active
-					a(href="#") Followers
-				li
-					a(href="/search") Search
-	div.container
-		div.col-xs-12.content
-			div.followers
+			div.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.active
+						a(href="#") Followers
+					li
+						a(href="/search") Search
 
+
+	div.col-xs-12.content
+		div.followers
+			span.glyphicon.glyphicon-time
+			span(style="padding: 0px 20px") Loading...

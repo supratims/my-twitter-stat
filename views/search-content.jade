@@ -1,17 +1,17 @@
 div.container
-	div.navbar(role="navigation")
-		div.container
+	nav.navbar.navbar-default(role="navigation")
+		div.div.container-fluid
 			div.navbar-header
 				a.navbar-brand(href="#") Tweet-o-sphere
-			ul.nav.navbar-nav
-				li
-					a(href="/") Followers
-				li.active
-					a(href="#") Search
+			div.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li
+						a(href="/") Followers
+					li.active
+						a(href="#") Search
 
-	div.container
-		div.col-xs-12.searchbox
-			div.panel
-				input(type='text')#param |
-				a.btn.search-button(href='#') Search
-		div.col-xs-12.content
+	div.col-xs-12.searchbox
+		div.panel
+			input(type='text')#param |
+			a.btn.search-button(href='#') Search
+	div.col-xs-12.content

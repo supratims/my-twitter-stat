@@ -30,8 +30,9 @@
 			console.log(d);
 			var ar = d.users;
 			ar.sort(function(a, b) {
-				return	b.followers_count - a.followers_count;
+				return b.followers_count - a.followers_count;
 			});
+			$followersContent.html('');
 			$.each(ar, function(i, v) {
 				var cont = buildObject(v);
 				$followersContent.append(cont);

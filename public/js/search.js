@@ -33,6 +33,7 @@
 				if (!d || !d.statuses || d.statuses.length == 0) {
 					$searchResults.html("No results found. Probably no activity in recent time.");
 				} else {
+					$searchResults.html("<p>Displaying first 15 results ...</p>");
 					$.each(d.statuses, function(i, v) {
 						var cont = buildObject(v);
 						$searchResults.append(cont);
